@@ -1,0 +1,423 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"usu",
+				"Usuario"
+			],
+			[
+				"te",
+				"telefone"
+			],
+			[
+				"co",
+				"complemento"
+			],
+			[
+				"n",
+				"numero"
+			],
+			[
+				"ce",
+				"cep"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"db",
+				"dbname"
+			],
+			[
+				"varca",
+				"VARCHAR"
+			],
+			[
+				"varc",
+				"VARCHAR"
+			],
+			[
+				"pas",
+				"passwordSenha"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"i",
+				"input\tTag"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"texta",
+				"text-align"
+			],
+			[
+				"bo",
+				"bootstrap"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"mt",
+				"meta\tTag"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"m",
+				"mysql_create_db"
+			],
+			[
+				"dbase",
+				"dbase_create"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"bg",
+				"bg_color"
+			],
+			[
+				"p",
+				"php\t<?php … ?>"
+			],
+			[
+				"ra",
+				"radio5"
+			],
+			[
+				"radio",
+				"radio2"
+			],
+			[
+				"v",
+				"Verde"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"array",
+				"array2"
+			],
+			[
+				"to",
+				"tot"
+			],
+			[
+				"fo",
+				"for\tfor …"
+			],
+			[
+				"chave",
+				"chave2"
+			],
+			[
+				"cha",
+				"chave"
+			],
+			[
+				"pe",
+				"peso1"
+			],
+			[
+				"isn",
+				"is_null"
+			],
+			[
+				"al",
+				"altura1"
+			],
+			[
+				"peso",
+				"peso1"
+			],
+			[
+				"e",
+				"echo\techo \"…\""
+			],
+			[
+				"altu",
+				"altura"
+			],
+			[
+				"altuar",
+				"altura1"
+			],
+			[
+				"PESO",
+				"peso1"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"calc",
+				"calculoMassa"
+			],
+			[
+				"altur",
+				"altura1"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"bra",
+				"git: branch"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/Gfartice/home.php",
+		"/C/xampp/htdocs/Gfartice/manter_usuario.php",
+		"/C/xampp/htdocs/Gfartice/login.php",
+		"/C/xampp/htdocs/Gfartice/verificar_login.php",
+		"/C/xampp/htdocs/Gfartice/inserir_usuario.php",
+		"/C/xampp/htdocs/Gfartice/bootstrap.css",
+		"/C/xampp/htdocs/Gfartice/manter_servicos.php",
+		"/C/xampp/htdocs/Gfartice/sobre.php",
+		"/C/xampp/htdocs/Gfartice/createBanco.php",
+		"/C/xampp/htdocs/Gfartice/tabelas_mysql.php",
+		"/C/Users/Erivelton Feltrin/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/C/Users/Erivelton Feltrin/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/C/xampp/htdocs/Gfartice/manter_servicos_prestador.php",
+		"/C/xampp/htdocs/Aula2103/Sql2103.php",
+		"/C/xampp/htdocs/Aula2103/table.php",
+		"/C/xampp/htdocs/foreach.html",
+		"/C/xampp/htdocs/listaParImpar.php",
+		"/C/Users/Erivelton Feltrin/Desktop/Atividadeforeach/opcao.php",
+		"/C/Users/Erivelton Feltrin/Desktop/Atividadeforeach/atividade2.html",
+		"/C/xampp/htdocs/enviar.php",
+		"/C/xampp/htdocs/Aula1403.php",
+		"/C/xampp/htdocs/Aula19.php",
+		"/C/xampp/htdocs/calcular.php",
+		"/C/xampp/htdocs/home.php",
+		"/C/xampp/htdocs/index.php",
+		"/C/Users/Erivelton Feltrin/Desktop/variaveis 2/matriz.php",
+		"/C/Users/Erivelton Feltrin/Desktop/Aula1203.php",
+		"/C/Users/Erivelton Feltrin/Desktop/cliente.php",
+		"/C/Users/Erivelton Feltrin/Desktop/ola.php",
+		"/C/Users/Erivelton Feltrin/Desktop/Php050318.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "verificar_login.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 71.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"my_db"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
