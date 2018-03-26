@@ -29,7 +29,7 @@ if ($conn -> connect_error) {
 }
 
 $query_select = "SELECT login FROM Usuario WHERE email = '$email'";
-$select = mysql_query($query_select,$conn);
+$select = mysql_query($query_select, $conn);
 $array = mysql_fetch_array($select);
 $logarray = $array['email'];
  
