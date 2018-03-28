@@ -31,6 +31,7 @@
     </ul>
   </div>
 </nav>
+	
 	<div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
 	<form style="margin-left: 5%;" method="POST" action="inserir_usuario.php">
 		Nome:<br> <input type="text" name="txtnome"><br>
@@ -86,6 +87,7 @@
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<input type="submit" name="submit_enviar" value="Enviar">
 		</div>
+		
 	</form>
 </body>
 </html>
