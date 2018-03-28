@@ -34,7 +34,6 @@
 	<div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
 	<form style="margin-left: 5%;" method="POST" action="inserir_usuario.php">
 		Nome:<br> <input type="text" name="txtnome"><br>
-		Rg:<br> <input type="text" name="txtRg"><br>
 		Cpf/Cnpj:<br> <input type="text" name="txtCpfCnpj"><br>
 		Data de nascimento:<br><input type="text" name="txtDataNascimento"/><br>
 		CEP:<br><input type="text" name="txtCep"><br>

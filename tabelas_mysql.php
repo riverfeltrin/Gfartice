@@ -14,7 +14,7 @@ $sql = "CREATE TABLE Usuario (
 		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		nome VARCHAR(30) NOT NULL,
 		cpf_cnpj VARCHAR(30) NOT NULL,
-		data_de_nascimento VARCHAR(10),
+		data_de_nascimento VARCHAR(8),
 		cep VARCHAR (20),
 		endereco VARCHAR (50),
 		numero int(8),
@@ -25,8 +25,7 @@ $sql = "CREATE TABLE Usuario (
 		celular VARCHAR (15),
 		whatsApp boolean,
 		email VARCHAR(50),
-		senha VARCHAR (20),
-		reg_date TIMESTAMP
+		senha VARCHAR (20)
 		)";
 
 		if ($conn -> query($sql) == TRUE) {
