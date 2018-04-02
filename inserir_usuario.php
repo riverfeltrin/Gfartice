@@ -11,7 +11,7 @@ $cidade = $_POST['txtCidade'];
 $estado = $_POST['uf'];
 $telefone = $_POST['txtTelefone'];
 $celular = $_POST['txtCelular'];
-$whats = $_POST['cbxSim'];
+$whats = $_POST['txtnome'];
 $email = $_POST['txtEmail'];
 $senha = MD5($_POST['passwordSenha']);
 
@@ -34,13 +34,13 @@ $select = $conn->query($query_select);
 //var_dump($select);
 
 
-if ($select->num_rows < 0) {
+if ($select->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         //echo "Id" $row ["id"] "nome" $row["nome"];
     }
 } else {
         echo "0results";
-        $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,whatsApp,email,senha)
+        $sql = "INSERT INTO Usuario ('nome','cpf_cnpj','data_de_nascimento','cep','endereco','numero','complemento','cidade','estado','telefone','celular','whatsApp','email','senha')
         VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
         '$estado','$telefone','$celular','$whats','$email','$senha')";
         if ($conn->query($sql) == TRUE) {
