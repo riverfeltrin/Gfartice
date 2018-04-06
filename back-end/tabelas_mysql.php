@@ -10,7 +10,7 @@ if ($conn -> connect_error) {
 	die("Erro: ". $conn -> connect_error);
 }
 
-$sql = "CREATE TABLE Usuario (
+/*$sql = "CREATE TABLE Usuario (
 		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		nome VARCHAR(30) NOT NULL,
 		cpf_cnpj VARCHAR(30) NOT NULL,
@@ -27,9 +27,16 @@ $sql = "CREATE TABLE Usuario (
 		email VARCHAR(50),
 		senha VARCHAR (20)
 		)";
+*/
+$sql = "CREATE TABLE Servico (
+		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		tipoServico VARCHAR(20) NOT NULL,
+		descricao VARCHAR (300) NOT NULL
+		)";
+
 
 		if ($conn -> query($sql) == TRUE) {
-			echo "Table clientes criada";
+			echo "Table Servico criada";
 		}else{
 			echo "Erro na criação: ". $conn -> erro;
 		}

@@ -11,7 +11,7 @@ $cidade = $_POST['txtCidade'];
 $estado = $_POST['uf'];
 $telefone = $_POST['txtTelefone'];
 $celular = $_POST['txtCelular'];
-$whats = $_POST['txtnome'];
+$whats = $_POST['cbxSim'];
 $email = $_POST['txtEmail'];
 $senha = MD5($_POST['passwordSenha']);
 
@@ -30,21 +30,25 @@ if ($conn -> connect_error) {
 //WHERE email = '$email'
 $query_select = "SELECT email FROM Usuario WHERE email = '$email'";
 $select = $conn->query($query_select);
-var_dump($select);
+
+//contar quantos campos foram selecionados
+//var_dump($select);
 
 
 if ($select->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while($row = $select->fetch_assoc()) {
         //echo "Id" $row ["id"] "nome" $row["nome"];
-      echo "fodeu";
     }
+  echo '<script>alert("Email já cadastrado no sistema!");</script>';  
+  echo "<script>window.location = '../front-end/home.php';</script>";
 } else {
         echo "0results";
         $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,whatsApp,email,senha)
         VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
         '$estado','$telefone','$celular','$whats','$email','$senha')";
         if ($conn->query($sql) == TRUE) {
-          echo "FOI";
+          echo '<script>alert("Usuário cadastrado com sucesso!");</script>';  
+          echo "<script>window.location = '../front-end/login.php';</script>"; 
         }else{
           echo "Deu Ruim" . $conn->error;
         }

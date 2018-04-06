@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Cadastro</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 
 </head>
 <body style="background-color: black;">
@@ -20,7 +20,7 @@
         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="manter_servicos.php">Serviços</a>
+        <a class="nav-link" href="cadastrar_servicos.php">Serviços</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="manter_usuario.php">Cadastrar-se</a>
@@ -33,7 +33,7 @@
 </nav>
 	
 	<div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
-	<form style="margin-left: 5%;" method="POST" action="inserir_usuario.php">
+	<form style="margin-left: 5%;" method="POST" action="../back-end/inserir_usuario.php">
 		Nome:<br> <input type="text" name="txtnome"><br>
 		Cpf/Cnpj:<br> <input type="text" name="txtCpfCnpj"><br>
 		Data de nascimento:<br><input type="text" name="txtDataNascimento"/><br>
@@ -77,8 +77,8 @@
 		Telefone:<br><input type="text" name="txtTelefone"><br>
 		Celular:<br><input type="text" name="txtCelular"><br>
 		WhatsApp:<br><br>
-		&nbsp&nbsp&nbsp&nbsp&nbsp Sim: <input type="checkbox" name="cbxSim" id="cbxSim">
-		&nbsp&nbsp&nbsp&nbsp&nbsp Não: <input type="checkbox" name="cbxNao" id="cbxNao"><br><br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp Sim: <input type="checkbox" name="cbxSim" id="Sim">
+		&nbsp&nbsp&nbsp&nbsp&nbsp Não: <input type="checkbox" name="cbxNao" id="Nao"><br><br>
 		Prestador de serviços?&nbsp&nbsp&nbsp
 		<br><br>
 		<!--Inserir aqui os campos de prestador dependendo do selecionado no campo select prestador -->

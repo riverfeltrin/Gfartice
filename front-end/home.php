@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>
 
 
@@ -20,7 +20,7 @@
         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="manter_servicos.php">Serviços</a>
+        <a class="nav-link" href="cadastrar_servicos.php">Serviços</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="manter_usuario.php">Cadastrar-se</a>

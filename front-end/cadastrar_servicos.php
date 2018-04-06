@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<title></title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<title>Login</title>
 </head>
+
+
 <body style="background-color: black;">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="home.php">Gfartice</a>
+  <a class="navbar-brand" href="#">Gfartice</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,16 +30,28 @@
       </li>
     </ul>
   </div>
-</nav>
-	<div style="margin-left: 20%; margin-right: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
-	<form style="margin-left: 5%;" method="POST" action="verificar_login.php">
-	<label>Login:</label><br><input type="text" name="login" id="login"><br>
-	<label>Senha:</label><br><input type="password" name="senha" id="senha"><br><br>
-	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	<input style="margin-left: 10%;" type="submit" value="entrar" id="entrar" name="entrar"><br>
-	&nbsp&nbsp
-	<a style="margin-left: 10%;" href="manter_usuario.php">Cadastre-se</a>
-	</form>
-	</div>
+  </nav>
+
+  <!--Formulário-->
+  <div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius:20px;">
+  <form style="margin-left: 5%;" method="POST" action="../back-end/inserir_servicos.php">
+    Selecione o tipo de serviço:&nbsp
+    <select name="tipoServico" id="tipoServico">
+      <option value="">Selecione</option>
+      <option value="eletrica">Elétrica</option>
+      <option value="pintura">Pintura</option>
+      <option value="encanador">Encanador</option>
+      <option value="instalacoes">Instalações</option>
+      <option value="reparos">Reparos</option>
+      <option value="outros">Outros</option>
+    </select><br><br>
+    Descrição do serviço:<br>
+    <textarea rows="6" cols="80" name="descricao" id="descricao">
+      
+    </textarea>
+
+
+  </form>
+  </div>
 </body>
 </html>
