@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 
 </head>
 <body style="background-color: black;">
