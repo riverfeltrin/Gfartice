@@ -2,13 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Cadastro</title>
+	<title>Orçamento</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-
 </head>
 <body style="background-color: black;">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Gfartice</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -45,12 +44,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 	}
 ?>
 
-
-	<div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
-	<form style="margin-left: 5%;" method="POST" action="../back-end/inserir_usuario.php">
+<div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
+	<form style="margin-left: 5%;" method="POST" action="../back-end/inserir_orcamento.php">
 		Nome:<br> <input type="text" name="txtnome"><br>
 		Cpf/Cnpj:<br> <input type="text" name="txtCpfCnpj"><br>
-		Data de nascimento:<br><input type="text" name="txtDataNascimento"/><br>
 		CEP:<br><input type="text" name="txtCep"><br>
 		Endereço:<br><input type="text" name="txtEndereco"><br>
 		Número:<br><input type="text" name="txtNumero"><br>
@@ -90,25 +87,20 @@ $conn = new mysqli($servername, $username, $password, $dbname);
  		</select><br><br>
 		Telefone:<br><input type="text" name="txtTelefone"><br>
 		Celular:<br><input type="text" name="txtCelular"><br><br>
-		Informe sua especialidade:<br>
-		<select id="especialidade">
+		Email:<br><input type="text" name="txtEmail"><br>
+		<select id="especificacaoServico">
 			<option value="">Selecione a opção</option>
 			<?php  
 			$resultEspecialidade = "SELECT * FROM Servico";
 			$resultadoEspecialidade = mysqli_query($conn, $resultEspecialidade);
 			while ($row_tipoServico = mysqli_fetch_assoc($resultadoEspecialidade)){?>
 				<option value="<?php echo $row_tipoServico['id']; ?>"><?php echo $row_tipoServico['tipoServico'];?></option><?php  
-			}?>
-			
+			}
+			?>
 		</select>
-
-		<br><br>
-		Email:<br><input type="text" name="txtEmail"><br>
-		Senha:<br><input type="password" name="passwordSenha"><br><br><br>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<input type="submit" name="submit_enviar" value="Enviar">
-		
-		
+		Descrição do serviço:<br>
+    	<textarea rows="6" cols="80" name="descricao" id="descricao"></textarea>
+		<input type="submit" name="submit_enviar" value="Enviar">	
 	</form>
 	</div>
 <?php  	

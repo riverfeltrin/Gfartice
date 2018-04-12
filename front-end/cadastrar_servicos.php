@@ -35,21 +35,12 @@
   <!--Formulário-->
   <div style="margin-right: 20%; margin-left: 20%; margin-top: 5%; background-color: #DAA520; border-radius:20px;">
   <form style="margin-left: 5%;" method="POST" action="../back-end/inserir_servicos.php">
-    Selecione o tipo de serviço:&nbsp
-    <select name="tipoServico" id="tipoServico">
-      <option value="">Selecione</option>
-      <option value="eletrica">Elétrica</option>
-      <option value="pintura">Pintura</option>
-      <option value="encanador">Encanador</option>
-      <option value="instalacoes">Instalações</option>
-      <option value="reparos">Reparos</option>
-      <option value="outros">Outros</option>
-    </select><br><br>
+    Tipo de serviço:&nbsp<input type="text" name="tipoServico">
+    <br><br>
     Descrição do serviço:<br>
     <textarea rows="6" cols="80" name="descricao" id="descricao">
-      
     </textarea>
-
+    <input type="submit" name="Cadastrar">
 
   </form>
   </div>

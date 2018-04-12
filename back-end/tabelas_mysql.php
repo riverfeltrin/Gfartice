@@ -23,20 +23,38 @@ if ($conn -> connect_error) {
 		estado VARCHAR (2),
 		telefone VARCHAR (15),
 		celular VARCHAR (15),
-		whatsApp boolean,
 		email VARCHAR(50),
-		senha VARCHAR (20)
+		senha VARCHAR (20),
+		especialidade_ID int(11) NOT NULL
 		)";
-*/
+
 $sql = "CREATE TABLE Servico (
 		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		tipoServico VARCHAR(20) NOT NULL,
-		descricao VARCHAR (300) NOT NULL
+		descricao VARCHAR (300) 
 		)";
+
+$sql = "CREATE TABLE Orcamento (
+		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		nomeCliente VARCHAR(30) NOT NULL,
+		cpfCnpj VARCHAR (20) NOT NULL,
+		cep VARCHAR(20) NOT NULL,
+		endereco VARCHAR(50) NOT NULL,
+		numero int(8) NOT NULL,
+		complemento VARCHAR(15),
+		cidade VARCHAR (20) NOT NULL,
+		estado VARCHAR (2) NOT NULL,
+		telefone VARCHAR (15),
+		celular VARCHAR (15),
+		email VARCHAR(50),
+		tipoServicoId int(11) NOT NULL,
+		descricao VARCHAR(300) NOT NULL
+		)";
+*/
 
 
 		if ($conn -> query($sql) == TRUE) {
-			echo "Table Servico criada";
+			echo "Table Orcamento criada";
 		}else{
 			echo "Erro na criação: ". $conn -> erro;
 		}

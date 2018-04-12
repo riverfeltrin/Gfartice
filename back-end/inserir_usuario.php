@@ -11,9 +11,9 @@ $cidade = $_POST['txtCidade'];
 $estado = $_POST['uf'];
 $telefone = $_POST['txtTelefone'];
 $celular = $_POST['txtCelular'];
-$whats = $_POST['cbxSim'];
 $email = $_POST['txtEmail'];
 $senha = MD5($_POST['passwordSenha']);
+$especialidade = $_POST['especialidade'];
 
 
 
@@ -42,10 +42,9 @@ if ($select->num_rows > 0) {
   echo '<script>alert("Email já cadastrado no sistema!");</script>';  
   echo "<script>window.location = '../front-end/home.php';</script>";
 } else {
-        echo "0results";
-        $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,whatsApp,email,senha)
+        $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,email,senha,especialidade)
         VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
-        '$estado','$telefone','$celular','$whats','$email','$senha')";
+        '$estado','$telefone','$celular','$email','$senha','$especialidade')";
         if ($conn->query($sql) == TRUE) {
           echo '<script>alert("Usuário cadastrado com sucesso!");</script>';  
           echo "<script>window.location = '../front-end/login.php';</script>"; 
