@@ -2,34 +2,71 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+   <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+       
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+<style>
+      .slider .indicators .indicator-item.active {
+        background-color: #79807a;
+    }
 
 
-<body style="background-color: black;">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="home.php">Gfartice</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      .slider .slides {   
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+
+    </style>
+
+<body>
+
+   <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="../imagens/pintura.jpg"> 
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cadastrar_servicos.php">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="manter_usuario.php">Cadastrar-se</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.php">Sobre</a>
+      <li>
+        <img src="../imagens/eletrica.jpg"> 
+        <div class="caption left-align">
+          <h3 class="black-text">Left Aligned Caption</h3>
+          <h5 class="black-text">Here's our small slogan.</h5>
+        </div>
       </li>
     </ul>
   </div>
-</nav>
+ 
+  <script src="../materialize/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+      </script>
+
+    <script type="text/javascript">
+      // Or with jQuery
+      $(document).ready(function(){
+      $('.slider').slider({
+        height: 675
+      });
+      });
+    </script>
+ 
 </body>
 </html>

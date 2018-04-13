@@ -91,13 +91,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 		Telefone:<br><input type="text" name="txtTelefone"><br>
 		Celular:<br><input type="text" name="txtCelular"><br><br>
 		Informe sua especialidade:<br>
-		<select id="especialidade">
+		<select  name="especialidade">
 			<option value="">Selecione a opção</option>
 			<?php  
 			$resultEspecialidade = "SELECT * FROM Servico";
 			$resultadoEspecialidade = mysqli_query($conn, $resultEspecialidade);
 			while ($row_tipoServico = mysqli_fetch_assoc($resultadoEspecialidade)){?>
-				<option value="<?php echo $row_tipoServico['id']; ?>"><?php echo $row_tipoServico['tipoServico'];?></option><?php  
+				<option value="<?php echo ($row_tipoServico['id']); ?>"><?php echo $row_tipoServico['tipoServico'];?></option><?php  
 			}?>
 			
 		</select>
