@@ -2,43 +2,54 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Login</title>
 </head>
-<body style="background-color: black;">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="home.php">Gfartice</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<body>
+  <nav style="background-color: #1e88e5;">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="../front-end/cadastrar_orcamento.php">Orçamento</a></li>
+        <li><a href="../front-end/login.php">Login</a></li>
+        <li><a href="../front-end/sobre.php">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cadastrar_servicos.php">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="manter_usuario.php">Cadastrar-se</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.php">Sobre</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-	<div style="margin-left: 20%; margin-right: 20%; margin-top: 5%; background-color: #DAA520; border-radius: 20px;">
-	<form style="margin-left: 5%;" method="POST" action="verificar_login.php">
-	<label>Login:</label><br><input type="text" name="login" id="login"><br>
-	<label>Senha:</label><br><input type="password" name="senha" id="senha"><br><br>
-	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	<input style="margin-left: 10%;" type="submit" value="entrar" id="entrar" name="entrar"><br>
-	&nbsp&nbsp
-	<a style="margin-left: 10%;" href="manter_usuario.php">Cadastre-se</a>
-	</form>
-	</div>
+  <div class="row" style="margin-left: 35%;">
+    <form method="post" action="" class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate" name="loginNome">
+          <label for="icon_prefix">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="password" class="validate" name="loginPassword">
+          <label for="icon_prefix">Senha</label>
+        </div><br>
+      </div>
+      <button style="margin-left: 8%;" class="btn waves-effect waves-light" type="submit" name="login">Log In
+        <i class="material-icons right">send</i>
+      </button><br><br>
+      <a style="margin-left: 8%;" href="manter_usuario.php">Cadastre-se</a>
+      </div>
+      
+    </form>
+
+
+  <script src="../materialize/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function() {
+    $('input#input_text, textarea#textarea2').characterCounter();
+   });
+  </script>
 </body>
 </html>
