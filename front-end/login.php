@@ -5,10 +5,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Login</title>
+  <title>Login</title>
 </head>
 <body>
-  <nav style="background-color: #1e88e5;">
+  <nav style="background-color: #2bbbad;">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -20,11 +20,11 @@
   </nav>
 
   <div class="row" style="margin-left: 35%;">
-    <form method="post" action="" class="col s12">
+    <form method="post" action="../back-end/verificar_login.php" class="col s12">
       <div class="row">
         <div class="input-field col s3">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate" name="loginNome">
+          <input id="icon_prefix" type="text" class="validate" name="loginEmail">
           <label for="icon_prefix">Email</label>
         </div>
       </div>
@@ -39,9 +39,9 @@
         <i class="material-icons right">send</i>
       </button><br><br>
       <a style="margin-left: 8%;" href="manter_usuario.php">Cadastre-se</a>
-      </div>
-      
     </form>
+  </div>   
+  
 
 
   <script src="../materialize/jquery.js"></script>
@@ -49,7 +49,7 @@
   <script type="text/javascript">
    $(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
-   });
-  </script>
+  });
+</script>
 </body>
 </html>

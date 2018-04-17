@@ -22,7 +22,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 	}
 ?>
 
-<nav style="background-color: #1e88e5;">
+<nav style="background-color: #2bbbad;">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">

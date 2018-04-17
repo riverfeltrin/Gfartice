@@ -25,8 +25,8 @@
 
     </style>
 
-<body>
-  <nav>
+<body style="background-color: #c1f0ed;">
+  <nav style="background-color: #2bbbad; " >
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">

@@ -24,7 +24,7 @@ if ($conn -> connect_error) {
 		telefone VARCHAR (15),
 		celular VARCHAR (15),
 		email VARCHAR(50),
-		senha VARCHAR (20),
+		senha VARCHAR (40),
 		especialidade_ID int(11) NOT NULL
 		)";
 
@@ -50,8 +50,8 @@ $sql = "CREATE TABLE Orcamento (
 		tipoServicoId int(11) NOT NULL,
 		descricao VARCHAR(300) NOT NULL
 		)";
-*/
 
+*/
 
 		if ($conn -> query($sql) == TRUE) {
 			echo "Table Orcamento criada";
