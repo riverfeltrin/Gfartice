@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['usuarioLog'])) {
+  header("location: ../front-end/home.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
