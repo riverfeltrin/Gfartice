@@ -2,42 +2,52 @@
 <html>
 <head>
 	<title>Home</title>
-   <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
-<style>
-      .slider .indicators .indicator-item.active {
-        background-color: #79807a;
-    }
+ <!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
-      .slider .slides {   
-      position: absolute !important;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-
-    </style>
-
-<body style="background-color: #c1f0ed;">
-  <nav style="background-color: #2bbbad; " >
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+ <!--Navbar
+ <nav style="background-color: #2bbbad; " >
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="../front-end/sobre.php">Sobre</a></li>    
+      <?php if ($logado != null) { ?>
+      <li><a href="../back-end/logout.php">Sair</li>
+        <?php echo $logado;?>
+        <?php}
+        else { ?>
+        <li><a href="../front-end/manter_usuario.php">Cadastre-se</a></li>
+        <li><a href="../front-end/login.php">Login</a></li>
+        <?php } ?> 
       </ul>
     </div>
   </nav>
-  
-   <div class="slider">
+-->
+</head>
+<style>
+.slider .indicators .indicator-item.active {
+  background-color: #79807a;
+}
+
+
+.slider .slides {   
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+</style>
+
+<body style="background-color: #c1f0ed;">
+
+
+  <div class="slider">
     <ul class="slides">
       <li>
         <img src="../imagens/pintura.jpg"> 
@@ -55,22 +65,22 @@
       </li>
     </ul>
   </div>
- 
-  <script src="../materialize/jquery.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-      <script type="text/javascript">
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-      </script>
 
-    <script type="text/javascript">
-      $(document).ready(function(){
+  <script src="../materialize/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
       $('.slider').slider({
         height: 675
       });
-      });
-    </script>
- 
+    });
+  </script>
+
 </body>
 </html>

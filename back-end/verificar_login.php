@@ -4,7 +4,10 @@ $username = "root";
 $password = "";
 $dbname = "bd_gfartice";
 
+session_start();
+
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 
 if ($conn -> connect_error) {
   die("Erro: ". $conn -> connect_error);
@@ -23,7 +26,10 @@ $select = $conn->query($query_select);
 if ($select->num_rows > 0) {
   while($row = $select->fetch_assoc()) {
         //echo "Id" $row ["id"] "nome" $row["nome"];
-  }
+  } 
+
+  $_SESSION['login'] = $login;
+  $_SESSION['senha'] = $senha;
   setcookie("login",$login);
   echo "<script language='javascript' type='text/javascript'>
   var result = confirm('Usuario logado!');
@@ -32,6 +38,8 @@ if ($select->num_rows > 0) {
   }
   </script>";
 } else {
+  unset ($_SESSION['login']);
+  unset ($_SESSION['senha']);
   echo "<script language='javascript' type='text/javascript'>
   var result = confirm('Senha errada!');
   if (result) {
