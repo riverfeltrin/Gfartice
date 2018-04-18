@@ -2,8 +2,7 @@
 session_start();
 
 unset( $_SESSION );
-unset( $_SESSION['login'] );
-unset( $_SESSION['senha'] );
+unset( $_SESSION['usuarioLog'] );
 session_destroy();
-header('location:../front-end/login.php');
+header('location:../front-end/home.php');
 ?>

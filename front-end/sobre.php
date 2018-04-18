@@ -3,33 +3,44 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sobre</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-</head>
-<body style="background-color: black;">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Gfartice</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cadastrar_servicos.php">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="manter_usuario.php">Cadastrar-se</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.php">Sobre</a>
-      </li>
+ <?php  
+ session_start();
+ if (!isset($_SESSION['usuarioLog'])) {
+  //header("location: ../front-end/login.php");
+   session_destroy();
+   $logado = null;
+ }else{
+  $logado = $_SESSION['usuarioLog'];
+}
+?>
+
+<nav style="background-color: #2bbbad; " >
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <?php if ($logado != null) { ?>
+      <li><?php echo "Bem vindo ", $logado;?></li>
+      <li><a href="../back-end/logout.php">Sair</li>
+      <li><a href="../front-end/sobre.php">Sobre</a></li>
+        <?php 
+      } else { ?>
+      <li><a href="../front-end/manter_usuario.php">Cadastre-se</a></li>
+      <li><a href="../front-end/login.php">Login</a></li>
+      <li><a href="../front-end/sobre.php">Sobre</a></li>
+      <?php } ?>
     </ul>
   </div>
 </nav>
+
+</head>
+<body style="background-color: #c1f0ed;">
+
 
 </body>
 </html>

@@ -2700,7 +2700,7 @@ i.left {
 }
 
 i.right {
-  float: right;
+  float: center;
   margin-left: 15px;
 }
 

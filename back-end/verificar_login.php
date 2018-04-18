@@ -19,18 +19,13 @@ $senha = md5($_POST['loginPassword']);
 $query_select = "SELECT * FROM Usuario WHERE email = '$login' AND senha = '$senha'";
 $select = $conn->query($query_select);
 
-//contar quantos campos foram selecionados
-//var_dump($select);
-
 
 if ($select->num_rows > 0) {
   while($row = $select->fetch_assoc()) {
         //echo "Id" $row ["id"] "nome" $row["nome"];
   } 
 
-  $_SESSION['login'] = $login;
-  $_SESSION['senha'] = $senha;
-  setcookie("login",$login);
+  $_SESSION['usuarioLog'] = $login;
   echo "<script language='javascript' type='text/javascript'>
   var result = confirm('Usuario logado!');
   if (result) {
@@ -38,10 +33,8 @@ if ($select->num_rows > 0) {
   }
   </script>";
 } else {
-  unset ($_SESSION['login']);
-  unset ($_SESSION['senha']);
   echo "<script language='javascript' type='text/javascript'>
-  var result = confirm('Senha errada!');
+  var result = confirm('Senha ou login incorretos!');
   if (result) {
     window.location.href = 'http://localhost:8081/Gfartice/front-end/login.php';
   }

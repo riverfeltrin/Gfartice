@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['usuarioLog'])) {
+  header("location: ../front-end/home.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +14,21 @@
  <!-- Compiled and minified CSS -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ <!--Navbar da page-->
+ <nav style="background-color: #2bbbad;">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="../front-end/home.php">Home</a></li>
+      <li><a href="../front-end/sobre.php">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
 </head>
-</head>
-<body>
+
+
+<body style="background-color: #c1f0ed;">
   <!--Criando conexão com o banco-->
   <?php
   $servername = "localhost";
@@ -23,19 +42,9 @@
     die("Erro: ". $conn -> connect_error);
   }
   ?>
-  <!--Navbar da page-->
-  <nav style="background-color: #2bbbad;">
-  	<div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="../front-end/cadastrar_orcamento.php">Orçamento</a></li>
-        <li><a href="../front-end/login.php">Login</a></li>
-        <li><a href="../front-end/sobre.php">Sobre</a></li>
-      </ul>
-    </div>
-  </nav>
+  
   <!--Início do form-->
-  <div style="margin-right: 30%; margin-left: 5%; margin-top: 5%; background-color: white; border-radius: 20px;">
+  <div style="margin-right: 30%; margin-left: 30%; margin-top: 5%; background-color: white; border-radius: 20px;">
 
    <div class="row">
     <form method="post" action="../back-end/inserir_usuario.php" class="col s12">

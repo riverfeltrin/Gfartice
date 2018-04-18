@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['usuarioLog'])) {
+  header("location: ../front-end/home.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
-</head>
-<body>
+
   <nav style="background-color: #2bbbad;">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
@@ -18,6 +24,10 @@
       </ul>
     </div>
   </nav>
+</head>
+<body>
+
+
 
   <div class="row" style="margin-left: 35%;">
     <form method="post" action="../back-end/verificar_login.php" class="col s12">
@@ -41,8 +51,6 @@
       <a style="margin-left: 8%;" href="manter_usuario.php">Cadastre-se</a>
     </form>
   </div>   
-  
-
 
   <script src="../materialize/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
