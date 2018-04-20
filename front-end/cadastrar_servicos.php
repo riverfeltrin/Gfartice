@@ -21,8 +21,7 @@
     </div>
 </nav>
   <!--Formulário-->
- <div style="margin-right: 30%; margin-left: 5%; margin-top: 5%; background-color: white; border-radius: 20px;">
-  <div class="row">
+  <div class="container">
     <form method="post" action="../back-end/inserir_servicos.php" class="col s12">
       <div class="input-field col s6">
           <input type="text" class="validate" name="tipoServico">
@@ -37,7 +36,6 @@
       </button>
     </form>  
  </div>
-</div>
 
 
 <script src="../materialize/jquery.js"></script>

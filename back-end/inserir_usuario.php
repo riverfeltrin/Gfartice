@@ -1,5 +1,6 @@
 <?php 
- 
+require("conexao.php");
+
 $nome = $_POST['txtnome'];
 $cpf_cnpj = $_POST['txtCpfCnpj'];
 $data = $_POST['txtDataNascimento'];
@@ -15,15 +16,6 @@ $email = $_POST['txtEmail'];
 $senha = MD5($_POST['passwordSenha']);
 $especialidade = $_POST['especialidade'];
 
-
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bd_gfartice";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
 if ($conn -> connect_error) {
   die("Erro: ". $conn -> connect_error);
 }
@@ -36,24 +28,24 @@ $select = $conn->query($query_select);
 
 
 if ($select->num_rows > 0) {
-    while($row = $select->fetch_assoc()) {
+  while($row = $select->fetch_assoc()) {
         //echo "Id" $row ["id"] "nome" $row["nome"];
-    }
+  }
   echo '<script>alert("Email já cadastrado no sistema!");</script>';  
   echo "<script>window.location = '../front-end/home.php';</script>";
 } else {
-        $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,email,senha,especialidade_Id)
-        VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
-        '$estado','$telefone','$celular','$email','$senha','$especialidade')";
-        if ($conn->query($sql) == TRUE) {
-          echo '<script>alert("Usuário cadastrado com sucesso!");</script>';  
-          echo "<script>window.location = '../front-end/login.php';</script>"; 
-        }else{
-          echo "Deu Ruim" . $conn->error;
-        }
-    }
+  $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,email,senha,especialidade_Id)
+  VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
+  '$estado','$telefone','$celular','$email','$senha','$especialidade')";
+  if ($conn->query($sql) == TRUE) {
+    echo '<script>alert("Usuário cadastrado com sucesso!");</script>';  
+    echo "<script>window.location = '../front-end/login.php';</script>"; 
+  }else{
+    echo "Deu Ruim" . $conn->error;
+  }
+}
 
-    
-    $conn->close();
+
+$conn->close();
 ?>
 

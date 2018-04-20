@@ -1,10 +1,5 @@
 <?php  
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bd_gfartice";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+require("conexao.php");
 
 if ($conn -> connect_error) {
 	die("Erro: ". $conn -> connect_error);
@@ -47,17 +42,17 @@ $sql = "CREATE TABLE Orcamento (
 		telefone VARCHAR (15),
 		celular VARCHAR (15),
 		email VARCHAR(50),
-		tipoServicoId int(11) NOT NULL,
+		tipoServico VARCHAR(20) NOT NULL,
 		descricao VARCHAR(300) NOT NULL
 		)";
 
-*/
+
 
 		if ($conn -> query($sql) == TRUE) {
 			echo "Table Orcamento criada";
 		}else{
 			echo "Erro na criação: ". $conn -> erro;
 		}
-
+*/
 		$conn->close();
 ?>

@@ -1,13 +1,6 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bd_gfartice";
-
+require("conexao.php");
 session_start();
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
 
 if ($conn -> connect_error) {
   die("Erro: ". $conn -> connect_error);
