@@ -15,14 +15,14 @@ if (isset($_SESSION['usuarioLog'])) {
 	<meta charset="utf-8">
 	<title>Cadastro</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" type="text/css" href="../materialize/css/materialize.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <body>
    <!--Navbar da page-->
    <nav style="background-color: #2bbbad;">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="home.php" class="brand-logo"><img src="../imagens/logo.png" style="height: 100px; width: 100px; margin-left: 15%;"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="../front-end/home.php">Home</a></li>
         <li><a href="../front-end/sobre.php">Sobre</a></li>
@@ -31,7 +31,7 @@ if (isset($_SESSION['usuarioLog'])) {
   </nav>
 </head>
 
-<h3 style="text-align: center;">Preencha os dados para o cadastro!</h3>
+<h3 class="corPrincipal" style="text-align: center;"><b>Preencha os dados para o cadastro!</b></h3>
 <!--Início do form-->
 <div class="container">
   <form method="post" action="../back-end/inserir_usuario.php" class="col s12">
@@ -126,7 +126,7 @@ if (isset($_SESSION['usuarioLog'])) {
        $resultEspecialidade = "SELECT * FROM Servico";
        $resultadoEspecialidade = mysqli_query($conn, $resultEspecialidade);
        while ($row_tipoServico = mysqli_fetch_assoc($resultadoEspecialidade)){?>
-       <option value="<?php echo $row_tipoServico['id']; ?>"><?php echo $row_tipoServico['tipoServico'];?></option><?php  
+       <option value="<?php echo $row_tipoServico['tipoServico']; ?>"><?php echo $row_tipoServico['tipoServico'];?></option><?php  
      }?>
    </select>
    <label>Selecione a especialidade</label>
@@ -141,12 +141,28 @@ if (isset($_SESSION['usuarioLog'])) {
   <input id="icon_prefix" type="password" class="validate" name="passwordSenha">
   <label for="icon_prefix">Senha</label>
 </div>
-</div>
 <button style="margin-left: 75%;" class="btn waves-effect waves-light" type="submit" name="submit_enviar">Enviar
   <i class="material-icons right">send</i>
 </button>
+</div>
 </form>
 </div>
+
+<footer class="page-footer" style="background-color: #2bbbad; ">
+  <div class="container">
+    <div class="row">
+      <div class="col l4 s12">
+        <img src="../imagens/logo.png">
+      </div>
+      <p class="grey-text text-lighten-4">A Gfartice é uma rede nacional de franquias especializadas em serviços de reformas e reparos: marido de aluguel, pedreiro, pintor, eletricista, encanador, gesseiro e mais. Confira nossos serviços. Seja Bem-vindo!</p>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Gfartice/Manutenção e reformas
+    </div>
+  </div>
+</footer>
 
 
 

@@ -34,7 +34,7 @@ if ($select->num_rows > 0) {
   echo '<script>alert("Email já cadastrado no sistema!");</script>';  
   echo "<script>window.location = '../front-end/home.php';</script>";
 } else {
-  $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,email,senha,especialidade_Id)
+  $sql = "INSERT INTO Usuario (nome,cpf_cnpj,data_de_nascimento,cep,endereco,numero,complemento,cidade,estado,telefone,celular,email,senha,especialidade)
   VALUES ('$nome','$cpf_cnpj','$data','$cep','$endereco','$numero','$complemento','$cidade',
   '$estado','$telefone','$celular','$email','$senha','$especialidade')";
   if ($conn->query($sql) == TRUE) {

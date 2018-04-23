@@ -5,39 +5,40 @@ require("../back-end/conexao.php");
 if ($conn -> connect_error) {
   die("Erro: ". $conn -> connect_error);
 }
-?>
 
+if ($_SESSION['usuarioLog'] != 'adm') {
+  header("location: ../front-end/home.php");
+  die();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Cadastro serviços</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="../materialize/css/materialize.css">
 
- <?php  
- session_start();
- if (!isset($_SESSION['usuarioLog'])) {
-  header("location: ../front-end/home.php");
-  die();
-}else{
-  $logado = $_SESSION['usuarioLog'];
-}
-?>
+  <?php  
+  session_start();
+  if (!isset($_SESSION['usuarioLog'])) {
+    header("location: ../front-end/home.php");
+    die();
+  }else{
+    $logado = $_SESSION['usuarioLog'];
+  }
+  ?>
 
 </head>
 <body>
   <ul id="dropdown1" class="dropdown-content">
     <?php if ($logado != null) { ?>
-    <li><a href="../front-end/consultar_pedidos.php">Consultar serviços</li>
-      <li class="divider"></li>
-      <li><a href="../front-end/sobre.php">Sobre</a></li>
+      <li><a href="../front-end/consultar_prestadores.php">Consultar prestadores</a></li>
       <li class="divider"></li>
       <li><a href="../back-end/logout.php">Sair</a></li>
       <?php }else{ ?>
-      <li><a href="../front-end/manter_usuario.php">Cadastre-se</a></li>
-      <li class="divider"></li>
-      <li><a href="../front-end/login.php">Login</a></li>
       <li class="divider"></li>
       <?php } ?>
     </ul>
@@ -130,9 +131,10 @@ if ($conn -> connect_error) {
         <script src="../materialize/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script type="text/javascript">
-         $(document).ready(function() {
-          $('input#input_text, textarea#textarea2').characterCounter();
-        });
-      </script>
-    </body>
-    </html>
+          $(".dropdown-trigger").dropdown();
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+          });
+        </script>
+      </body>
+      </html>

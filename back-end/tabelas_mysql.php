@@ -4,8 +4,8 @@ require("conexao.php");
 if ($conn -> connect_error) {
 	die("Erro: ". $conn -> connect_error);
 }
-
-/*$sql = "CREATE TABLE Usuario (
+/*
+$sql = "CREATE TABLE Usuario (
 		id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		nome VARCHAR(30) NOT NULL,
 		cpf_cnpj VARCHAR(30) NOT NULL,
@@ -20,7 +20,7 @@ if ($conn -> connect_error) {
 		celular VARCHAR (15),
 		email VARCHAR(50),
 		senha VARCHAR (40),
-		especialidade_ID int(11) NOT NULL
+		especialidade VARCHAR(20) NOT NULL
 		)";
 
 $sql = "CREATE TABLE Servico (
@@ -49,7 +49,7 @@ $sql = "CREATE TABLE Orcamento (
 
 
 		if ($conn -> query($sql) == TRUE) {
-			echo "Table Orcamento criada";
+			echo "Table Usuario criada";
 		}else{
 			echo "Erro na criação: ". $conn -> erro;
 		}

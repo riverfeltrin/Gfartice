@@ -12,14 +12,15 @@ if (isset($_SESSION['usuarioLog'])) {
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="../materialize/css/materialize.css">
   <title>Login</title>
 
   <nav style="background-color: #2bbbad;">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="home.php" class="brand-logo"><img src="../imagens/logo.png" style="height: 100px; width: 100px; margin-left: 15%;"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="../front-end/cadastrar_orcamento.php">Orçamento</a></li>
-        <li><a href="../front-end/login.php">Login</a></li>
+        <li><a href="../front-end/home.php">Home</a></li>
+        <li><a href="../front-end/manter_usuario.php">Cadastre-se</a></li>
         <li><a href="../front-end/sobre.php">Sobre</a></li>
       </ul>
     </div>

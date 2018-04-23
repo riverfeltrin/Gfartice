@@ -7,6 +7,7 @@
  <!-- Compiled and minified CSS -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <link rel="stylesheet" type="text/css" href="../materialize/css/materialize.css">
  <?php  
  session_start();
  if (!isset($_SESSION['usuarioLog'])) {
@@ -18,23 +19,6 @@
 }
 ?>
 </head>
-<style>
-.slider .indicators .indicator-item.active {
-  background-color: #79807a;
-}
-
-.corPrincipal {
-  color: #2bbbad;
-}
-
-.slider .slides {   
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-</style>
 
 <body>
   <ul id="dropdown1" class="dropdown-content">
@@ -60,7 +44,6 @@
           <li><a href="../front-end/manter_usuario.php">Trabalhe conosco</a></li>
           <li><a href="../front-end/cadastrar_orcamento.php">Orçamento</a></li>
           <?php } ?>
-          <li><a href="../front-end/inf.php">Quem somos</a></li>
           <li><a href="../front-end/sobre.php">Sobre</a></li>
           <?php if ($logado != null) { ?>
           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><?php echo "Bem vindo ", $logado;?><i class="material-icons right">arrow_drop_down</i></a></li><?php }else{
