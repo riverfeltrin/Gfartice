@@ -21,7 +21,7 @@ if ($select->num_rows > 0) {
         $sql = "INSERT INTO Servico (tipoServico, descricao) VALUES ('$tipoServico','$descricao')";
         if ($conn->query($sql) == TRUE) {
           echo '<script>alert("Serviço cadastrado com sucesso!");</script>';  
-          echo "<script>window.location = '../front-end/home.php';</script>"; 
+          echo "<script>window.location = '../front-end/cadastrar_servicos.php';</script>"; 
         }else{
           echo "Deu Ruim" . $conn->error;
         }

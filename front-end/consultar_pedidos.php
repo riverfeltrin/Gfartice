@@ -17,7 +17,6 @@ if (!isset($_SESSION['usuarioLog'])) {
 
 	<?php  
 	if (!isset($_SESSION['usuarioLog'])) {
-//header("location: ../front-end/login.php");
 		session_destroy();
 		$logado = null;
 	}else{
@@ -127,14 +126,8 @@ if (!isset($_SESSION['usuarioLog'])) {
 								echo "</td>";
 								echo "</tr>";
 							}
-
-							
 							?>
 						</table>
-						
-
-
-
 					</div>
 				</div>
 			</body>
